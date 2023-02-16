@@ -13,4 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        shell: bash
       - uses: education/autograding@v1
+        shell: bash
