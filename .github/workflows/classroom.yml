@@ -15,6 +15,7 @@ jobs:
       - run: echo $0
       - run: printenv
       - name: testingSettingVarShell
+        shell: sh
         run: SHOT=("rock" "paper" "scissors"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]};
       - name: testingSettingVarBash
         shell: bash
