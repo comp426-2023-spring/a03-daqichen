@@ -11,9 +11,12 @@ jobs:
   build:
     name: Autograding
     runs-on: ubuntu-latest
+    defaults:
+       run:
+          shell: bash --noprofile --norc -eo pipefail {0}
     steps:
-      - name: settingBash
-        run: bash --noprofile --norc -eo pipefail {0}
+      - name: EnvPrint
+        run: echo $0
       - run: printenv
       - uses: actions/checkout@v2
       - uses: education/autograding@v1
