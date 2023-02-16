@@ -12,7 +12,6 @@ jobs:
     name: Autograding
     runs-on: ubuntu-latest
     steps:
+      - run: bash
       - uses: actions/checkout@v2
-        shell: bash
       - uses: education/autograding@v1
-        shell: bash
