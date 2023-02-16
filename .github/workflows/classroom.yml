@@ -12,13 +12,8 @@ jobs:
     name: Autograding
     runs-on: ubuntu-latest
     steps:
-      - run: echo $0
+      - name: settingBash
+        run: bash --noprofile --norc -eo pipefail {0}
       - run: printenv
-      - name: testingSettingVarShell
-        shell: sh
-        run: SHOT=("rock" "paper" "scissors"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]};
-      - name: testingSettingVarBash
-        shell: bash
-        run: SHOT=("rock" "paper" "scissors"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]};
       - uses: actions/checkout@v2
       - uses: education/autograding@v1
