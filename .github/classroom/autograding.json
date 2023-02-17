@@ -73,7 +73,7 @@
     {
       "name": "Test test",
       "setup": "",
-      "run": "exec bash",
+      "run": "bash",
       "input": "",
       "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
       "comparison": "regex",
