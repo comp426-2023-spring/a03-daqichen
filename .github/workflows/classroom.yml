@@ -11,6 +11,10 @@ jobs:
   build:
     name: Autograding
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: classroom
     steps:
       - run: echo $SHELL
       - uses: actions/checkout@v2
