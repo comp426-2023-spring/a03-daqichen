@@ -41,6 +41,16 @@
       "points": 5000
     },
     {
+      "name": "Testing Shell",
+      "setup": "",
+      "run": "/bin/bash && echo $0; exit;",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5000
+    },
+    {
       "name": "Play Rock Paper Scissors with an opponent",
       "setup": "",
       "run": "#!/bin/bash && echo $0; SHOT=(\"rock\" \"paper\" \"scissors\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
