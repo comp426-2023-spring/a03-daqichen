@@ -62,8 +62,7 @@
     },
     {
       "name": "Play Rock Paper Scissors Lizard Spock with an opponent",
-      "setup": "",
-      "shell":bash,
+      "setup": "bash --noprofile --norc -eo pipefail {0}",
       "run": "SHOT=(\"rock\" \"paper\" \"scissors\" \"lizard\" \"spock\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rpsls $SHOT",
       "input": "",
       "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
