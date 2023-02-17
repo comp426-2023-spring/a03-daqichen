@@ -23,7 +23,7 @@
     {
       "name": "Testing",
       "setup": "",
-      "run": "echo $0; printenv;",
+      "run": "echo SHELL; echo $SHELL; echo 0; echo $0;",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -52,8 +52,8 @@
     },
     {
       "name": "Play Rock Paper Scissors with an opponent",
-      "setup": "",
-      "run": "sudo chsh -s /bin/bash; SHOT=(\"rock\" \"paper\" \"scissors\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
+      "setup": "#!/bin/bash",
+      "run": "echo: CHECK THIS ONE; SHOT=(\"rock\" \"paper\" \"scissors\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
       "input": "",
       "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
       "comparison": "regex",
