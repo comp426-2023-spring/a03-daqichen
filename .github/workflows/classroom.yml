@@ -12,5 +12,6 @@ jobs:
     name: Autograding
     runs-on: ubuntu-latest
     steps:
+      - run: echo $SHELL
       - uses: actions/checkout@v2
       - uses: education/autograding@v1
