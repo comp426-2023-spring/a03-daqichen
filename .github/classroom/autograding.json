@@ -21,6 +21,16 @@
       "points": null
     },
     {
+      "name": "Testing",
+      "setup": "",
+      "run": "echo $SHELL",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
       "name": "Play Rock Paper Scissors without opponent",
       "setup": "",
       "run": "node-rps",
@@ -42,8 +52,8 @@
     },
     {
       "name": "Play Rock Paper Scissors with an opponent",
-      "setup": "sudo chsh $USER -s /bin/bash",
-      "run": "SHOT=(\"rock\" \"paper\" \"scissors\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
+      "setup": "",
+      "run": "bash SHOT=(\"rock\" \"paper\" \"scissors\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
       "input": "",
       "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
       "comparison": "regex",
