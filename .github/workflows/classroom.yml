@@ -12,6 +12,6 @@ jobs:
     name: Autograding
     runs-on: ubuntu-latest
     steps:
-      - run: sudo chsh $USER -s bash
+      - run: sudo chsh $USER -s /bin/bash
       - uses: actions/checkout@v2
       - uses: education/autograding@v1
