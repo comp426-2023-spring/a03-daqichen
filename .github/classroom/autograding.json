@@ -62,8 +62,18 @@
     },
     {
       "name": "Play Rock Paper Scissors Lizard Spock with an opponent",
-      "setup": "bash",
+      "setup": "",
       "run": "SHOT=(\"rock\" \"paper\" \"scissors\" \"lizard\" \"spock\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rpsls $SHOT",
+      "input": "",
+      "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": 5000
+    },
+    {
+      "name": "Test test",
+      "setup": "",
+      "run": "bash SHOT=(\"rock\" \"paper\" \"scissors\" \"lizard\" \"spock\")",
       "input": "",
       "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
       "comparison": "regex",
