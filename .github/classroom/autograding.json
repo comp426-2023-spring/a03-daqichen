@@ -63,7 +63,7 @@
     {
       "name": "Play Rock Paper Scissors Lizard Spock with an opponent",
       "setup": "",
-      "run": "SHOT=(\"rock\" \"paper\" \"scissors\" \"lizard\" \"spock\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rpsls $SHOT",
+      "run":"PORT=\"$(shuf -i 2000-65535 -n 1)\"; (timeout --signal=SIGINT 5 node server.js --port=$PORT; exit 0) & sleep 1s && curl -I -s http://localhost:${PORT}/app/ && sleep 5s",
       "input": "",
       "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
       "comparison": "regex",
@@ -73,7 +73,7 @@
     {
       "name": "Test test",
       "setup": "",
-      "run": "bash",
+      "run": "bash && SHOT=(\"rock\" \"paper\" \"scissors\"); echo $SHOT; exit 0;",
       "input": "",
       "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
       "comparison": "regex",
