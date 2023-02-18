@@ -43,7 +43,7 @@
     {
       "name": "Testing Shell",
       "setup": "",
-      "run": "/bin/bash && echo $0 && exit 0",
+      "run": "echo $0",
       "input": "",
       "output": "",
       "comparison": "included",
