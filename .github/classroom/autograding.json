@@ -43,7 +43,7 @@
     {
       "name": "Testing Shell",
       "setup": "",
-      "run": "bash -lic \"SHOT=(\"hi\" \"hiii\")\"",
+      "run": "bash \"SHOT=(\"hi\" \"hiii\")\"",
       "input": "",
       "output": "",
       "comparison": "included",
