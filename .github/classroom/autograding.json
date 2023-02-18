@@ -43,7 +43,7 @@
     {
       "name": "Testing Shell",
       "setup": "",
-      "run": "cat /etc/shells",
+      "run": "bash -lic \"SHOT=(\"hi\" \"hiii\")\"",
       "input": "",
       "output": "",
       "comparison": "included",
