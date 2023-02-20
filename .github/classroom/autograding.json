@@ -43,7 +43,7 @@
     {
       "name": "Play Rock Paper Scissors with an opponent",
       "setup": "",
-      "run": "printf \"SHOT=(\"rock\" \"paper\" \"scissors\")\necho ${SHOT[$RANDOM % ${#SHOT[@]} ]}\nnode-rps $SHOT\" >> temp.sh; bash ./temp.sh",
+      "run": "printf \"#!\/bin\/bash\nSHOT=(\"rock\" \"paper\" \"scissors\")\necho ${SHOT[$RANDOM % ${#SHOT[@]} ]}\nnode-rps $SHOT\" >> temp.sh; bash ./temp.sh",
       "input": "",
       "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
       "comparison": "regex",
@@ -63,7 +63,7 @@
     {
       "name": "RPS Help",
       "setup": "",
-      "run": "#!/bin/bash; HELP=(\"-h\" \"--help\"); echo ${HELP[$RANDOM % ${#HELP[@]} ]}; node-rps $HELP",
+      "run": "#!\/bin\/bash; HELP=(\"-h\" \"--help\"); echo ${HELP[$RANDOM % ${#HELP[@]} ]}; node-rps $HELP",
       "input": "",
       "output": "display this help message and exit",
       "comparison": "included",
