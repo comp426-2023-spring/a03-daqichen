@@ -11,9 +11,10 @@ jobs:
   build:
     name: Autograding
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash --noprofile --norc -eo pipefail {0}
     steps:
       - uses: actions/checkout@v2
+      - name: Action Setup Bash
+        # You may pin to the exact commit or the version.
+        # uses: release-engineers/action-setup-bash@aba8014ede74bde9161c128cb761b4167d679c98
+        uses: release-engineers/action-setup-bash@v1.0.0
       - uses: education/autograding@v1
