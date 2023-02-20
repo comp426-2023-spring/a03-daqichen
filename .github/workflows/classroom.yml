@@ -11,8 +11,9 @@ jobs:
   build:
     name: Autograding
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash --noprofile --norc -eo pipefail {0}
     steps:
       - uses: actions/checkout@v2
-      - name: remote-bash
-        uses: shinhwagk/remote-bash@0.0.1
       - uses: education/autograding@v1
