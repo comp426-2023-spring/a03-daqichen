@@ -25,7 +25,7 @@
       "setup": "",
       "run": "node-rps",
       "input": "",
-      "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors\")}",
+      "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\"}",
       "comparison": "regex",
       "timeout": 10,
       "points": 5000
@@ -41,19 +41,9 @@
       "points": 5000
     },
     {
-      "name": "Testing Shell",
-      "setup": "",
-      "run": "bash \"SHOT=(\"hi\" \"hiii\")\"",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5000
-    },
-    {
       "name": "Play Rock Paper Scissors with an opponent",
       "setup": "",
-      "run": "echo $0; SHOT=(\"rock\" \"paper\" \"scissors\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
+      "run": "#!/bin/bash; SHOT=(\"rock\" \"paper\" \"scissors\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
       "input": "",
       "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
       "comparison": "regex",
