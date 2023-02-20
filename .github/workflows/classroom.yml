@@ -13,4 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: remote-bash
+        uses: shinhwagk/remote-bash@0.0.1
       - uses: education/autograding@v1
