@@ -13,10 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Babashka
-        uses: turtlequeue/setup-babashka@v1.5.0
-        with:
-          babashka-version: 0.8.156
-      - name: Check bb runs
-        run: bb --version
+      - name: Test
+        run: SHOT=("rock" "paper" "scissors"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}
       - uses: education/autograding@v1
