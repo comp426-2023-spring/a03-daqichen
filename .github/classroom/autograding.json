@@ -52,7 +52,7 @@
     },
     {
       "name": "Play Rock Paper Scissors Lizard Spock with an opponent",
-      "setup": "echo `SHOT=(\"rock\" \"paper\") && echo ${SHOT[$RANDOM % ${#SHOT[@]} ]} && node-rpsls $SHOT` > temp.sh",
+      "setup": "echo 'SHOT=(\"rock\" \"paper\") && echo ${SHOT[$RANDOM % ${#SHOT[@]} ]} && node-rpsls $SHOT' > temp.sh",
       "run": "cat temp.sh; bash temp.sh",
       "input": "",
       "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
